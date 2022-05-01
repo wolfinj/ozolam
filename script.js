@@ -1,4 +1,4 @@
-/// Add new class to hide element
+/// Add new class to hide element and format control elements
 
 const newStyle = document.createElement('style');
 
@@ -43,7 +43,7 @@ newStyle.textContent = `
 
 document.head.append(newStyle);
 
-/// hide enabled enabled elements
+/// hide enabled elements
 
 function hideEnabled() {
   const btnList = document.querySelectorAll('.bootstrap-switch-on');
@@ -59,7 +59,7 @@ function showHidden() {
   hiddenList.forEach((elem) => elem.classList.remove('hideEnabled'));
 }
 
-//Hide topics
+//Hide enabled with empty topics
 
 function hideEmptyHeadings() {
   hideEnabled();
