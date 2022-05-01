@@ -121,8 +121,8 @@ function hideElektrum() {
 
 // Create control buttons
 
-const controlBtn = document.createElement('div');
-controlBtn.classList.add('ctrlBtn');
+const controlPanel = document.createElement('div');
+controlPanel.classList.add('ctrlBtn');
 
 const buttonHide = document.createElement('Button');
 buttonHide.classList.add('wBtn');
@@ -144,13 +144,13 @@ buttonHideElektrum.classList.add('wBtn');
 buttonHideElektrum.innerHTML = ' Hide Elektrum';
 buttonHideElektrum.onclick = hideElektrum;
 
-controlBtn.append('Controls');
-controlBtn.append(document.createElement('br'));
-controlBtn.append(buttonHide);
-controlBtn.append(buttonShow);
-controlBtn.append(document.createElement('br'));
-controlBtn.append(buttonHideT);
-controlBtn.append(document.createElement('br'));
-controlBtn.append(buttonHideElektrum);
+controlPanel.append('Controls');
+controlPanel.append(document.createElement('br'));
+controlPanel.append(buttonHide);
+controlPanel.append(buttonShow);
+controlPanel.append(document.createElement('br'));
+controlPanel.append(buttonHideT);
+controlPanel.append(document.createElement('br'));
+controlPanel.append(buttonHideElektrum);
 
-document.body.appendChild(controlBtn);
+document.body.appendChild(controlPanel);
