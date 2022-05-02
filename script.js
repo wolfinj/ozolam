@@ -60,7 +60,7 @@ function showHidden() {
 }
 
 //Hide enabled with empty topics
-
+/*
 function hideEmptyHeadings() {
   hideEnabled();
   const allElContainers = document.querySelectorAll('.form-body');
@@ -88,6 +88,32 @@ function hideEmptyHeadings() {
         divEl = false;
       }
     }
+  }
+}
+*/
+
+function hideEmptyHeadings() {
+  hideEnabled();
+
+  const allElContainers = document.querySelectorAll('.form-body');
+  const allEl = allElContainers[1].children;
+  let divEl = true;
+  let elArr = [];
+
+  for (let i = 0; i < allEl.length; i++) {
+    if (allEl[i].nodeName === 'H5' || i + 1 === allEl.length) {
+      if (divEl) {
+        elArr.forEach((node) => node.classList.add('hideEnabled'));
+      }
+      console.log(elArr);
+      divEl = true;
+      elArr = [];
+    }
+
+    if (allEl[i].nodeName === 'DIV') {
+      if (!divEl || !allEl[i].classList.contains('hideEnabled')) divEl = false;
+    }
+    elArr.push(allEl[i]);
   }
 }
 
